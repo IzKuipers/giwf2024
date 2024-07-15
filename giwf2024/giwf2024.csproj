@@ -116,10 +116,6 @@
     <Compile Include="Textures.cs" />
     <Compile Include="Utilities.cs" />
     <None Include="Resources\bg4.PNG" />
-    <None Include="Resources\bg3.PNG" />
-    <None Include="Resources\bg2.PNG" />
-    <None Include="Resources\bg1.PNG" />
-    <None Include="Resources\bg.PNG" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,7 +132,6 @@
     <Content Include="fonts\Silkscreen.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="giwf2024_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,7 +143,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Content Include="player_happy.ico" />
-    <None Include="Resources\Silkscreen-Regular.ttf" />
     <None Include="TrickyForms.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -183,9 +177,7 @@
     <Content Include="levels\3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="levels\template.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="levels\template.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
