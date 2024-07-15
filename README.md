@@ -8,4 +8,4 @@ None. It's private.
 
 ## Author
 
-Izaak Kuipers <izaak.kuipers@gmail.com> 2024
+Izaak Kuipers <izaak.kuipers@gmail.com>
