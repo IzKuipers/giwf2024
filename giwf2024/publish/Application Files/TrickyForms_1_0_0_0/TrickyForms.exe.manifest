@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.0" name="TrickyForms.exe" publicKeyToken="4dd56f41da9cfbcb" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="player_happy.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TrickyForms" version="3.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="TrickyForms.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrickyForms.exe" size="262656">
+      <assemblyIdentity name="TrickyForms" version="3.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RKR/NDijHYzWDnInD/VFCKwxQZE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="fonts\Silkscreen.ttf" size="31960">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LGV99StRKJfYEY1GqNnOKsCBkeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="levels\1.txt" size="1293">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4daorBwwehEyuCK1ja1jUhU1yCU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="levels\2.txt" size="2553">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ruSK4jaYs9qPUDC51fxK+4G44ME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="levels\3.txt" size="1297">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>E17knJIoX3E1OGcmD84I1O1X9uw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="levels\template.txt" size="1483">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aenRhMRXgiU0MsvZ0TYOAmycDfE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="player_happy.ico" size="101697">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>c112NMS8TKErrxzXqrcBdiMV06A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Silkscreen-Regular.ttf" size="31960">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LGV99StRKJfYEY1GqNnOKsCBkeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=XPPC\Izaak" issuerKeyHash="91ac44837ee7d96e8ea41bf396b68e1cd7030465" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>wpJFXmfOAIi1ylxIF+/TWNGBXJ0=</DigestValue></Reference></SignedInfo><SignatureValue>oKX2ZY9jwVLqQOkvn4/D3B+PSdMi+wlhTcB+gRw456S++wJ+pfjh1LRi/l4wVpTj+pgZ7EWxrUb4wQ7doSpXTXMUmLfQTSU3DpjuK48G1xGy7Izk3sP41/hzlDysfusYHtKAkay4LRtVhDkO+viEKqoucW4piY6dLeV6C3nhN1Y=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>45fMQ/MhkMuIPjnk6882NNgJitYdD2pyfEIVt1zMtBLQ8MAHL8H/tMo3S9+lN5mQ9xRo4wwnxtTXozgRhOVqfv713ozXLYMQU1u9mxQ6WTQwbhmVjEnLzn+dVFMPuHeo8IPoGYfh3JCDCOWQSPlarSjWuC5DSDT8dLTJvQydV0s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9d5c81d158d3ef17485ccab58800ce675e4592c2" Description="" Url=""><as:assemblyIdentity version="1.0.0.0" name="TrickyForms.exe" publicKeyToken="4dd56f41da9cfbcb" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=XPPC\Izaak</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>7R4uVQazUEOlk94m86NR8PnGZUs=</DigestValue></Reference></SignedInfo><SignatureValue>hbo7j8vv1WJq/w0gPZkamnHDS+G8pATAVQrMqO6ygxl3JJlrIUd9PMo2ZYykKTkh/lIu0Dk5BJGifsLluSkzRznaz/fFgmHj42fYZMgynxXj14t7yjMcKmBT+e8zKAWJAqA+FjUF005kjrOPCDKVQG6ZEQoMljoad3yUmRiQSpk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>45fMQ/MhkMuIPjnk6882NNgJitYdD2pyfEIVt1zMtBLQ8MAHL8H/tMo3S9+lN5mQ9xRo4wwnxtTXozgRhOVqfv713ozXLYMQU1u9mxQ6WTQwbhmVjEnLzn+dVFMPuHeo8IPoGYfh3JCDCOWQSPlarSjWuC5DSDT8dLTJvQydV0s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBuTCCASagAwIBAgIQMS01DvhjXbJDsMClATBIeDAJBgUrDgMCHQUAMB8xHTAbBgNVBAMeFABYAFAAUABDAFwASQB6AGEAYQBrMB4XDTI0MDcxNTE2MjY1NVoXDTI1MDcxNTIyMjY1NVowHzEdMBsGA1UEAx4UAFgAUABQAEMAXABJAHoAYQBhAGswgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOOXzEPzIZDLiD455OvPNjTYCYrWHQ9qcnxCFbdczLQS0PDABy/B/7TKN0vfpTeZkPcUaOMMJ8bU16M4EYTlan7+9d6M1y2DEFNbvZsUOlk0MG4ZlYxJy85/nVRTD7h3qPCD6BmH4dyQgwjlkEj5Wq0o1rguQ0g0/HS0yb0MnVdLAgMBAAEwCQYFKw4DAh0FAAOBgQDRhZSqNmX9eJHrTZG3xoKEe4bOlqimshXhXl7KcCX27Mh+qkQugZmti7ncHPBZk4unR4RTEcphwALGDban3jSNhNLzRq+6Aw931TT2jfcqcangv9Y4rSKFWAt5HkMPkaucXARClxVqDrwDHsi9nAMJ2vMxQO+LYf8rtdsNGBTgqw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
