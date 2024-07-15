@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrickyForms.exe" size="265216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrickyForms.exe" size="266240">
       <assemblyIdentity name="TrickyForms" version="3.0.0.0" publicKeyToken="D52E369421B025FA" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KW0IXPtV8M8aVYapY/+7P9VwAMg=</dsig:DigestValue>
+        <dsig:DigestValue>Yy41jvy7NXK8Tu1/R9Iafaj/M0M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,22 +63,22 @@
       <dsig:DigestValue>LGV99StRKJfYEY1GqNnOKsCBkeU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="levels\1.txt" size="3743">
+  <file name="levels\1.txt" size="3708">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>8kB4tiGufFpOAtWtNnysnl0ugd8=</dsig:DigestValue>
+      <dsig:DigestValue>tl7MiDIG6b1PTPMlLnZjxOVbPec=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="levels\2.txt" size="7523">
+  <file name="levels\2.txt" size="7488">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qARBxDv4Yjnk9wI5cwaDAhtaAeI=</dsig:DigestValue>
+      <dsig:DigestValue>tzITkjo36RSYOjdvuKXZwJsYbSA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="levels\3.txt" size="3747">
@@ -88,15 +88,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>Qz7Z2HccoBZe5dAgJRAGsTpmgKA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="levels\template.txt" size="1483">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>aenRhMRXgiU0MsvZ0TYOAmycDfE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="player_happy.ico" size="101697">
