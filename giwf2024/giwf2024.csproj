@@ -62,10 +62,11 @@
     <ApplicationIcon>player_happy.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>9FAF613771949F8542E7A4D13E6740D03D24CDEA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6D79E889B28CD48529E2FD8B0D5EF2DFB07BB420</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>TrickyForms.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

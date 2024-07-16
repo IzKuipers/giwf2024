@@ -48,28 +48,28 @@
             this.textures.TransparentColor = System.Drawing.Color.Transparent;
             this.textures.Images.SetKeyName(0, "..empty");
             this.textures.Images.SetKeyName(1, "#next");
-            this.textures.Images.SetKeyName(2, "coin");
-            this.textures.Images.SetKeyName(3, "deathpoint");
-            this.textures.Images.SetKeyName(4, "wall");
-            this.textures.Images.SetKeyName(5, "Kgreen");
-            this.textures.Images.SetKeyName(6, "Kblue");
-            this.textures.Images.SetKeyName(7, "Kyellow");
-            this.textures.Images.SetKeyName(8, "hdeathpoint");
-            this.textures.Images.SetKeyName(9, "player_final");
-            this.textures.Images.SetKeyName(10, "player_happy");
-            this.textures.Images.SetKeyName(11, "player_jim");
-            this.textures.Images.SetKeyName(12, "player_neutral");
-            this.textures.Images.SetKeyName(13, "player");
-            this.textures.Images.SetKeyName(14, "kyellow_");
-            this.textures.Images.SetKeyName(15, "kgreen_");
-            this.textures.Images.SetKeyName(16, "kblue_");
-            this.textures.Images.SetKeyName(17, "1teleporter");
-            this.textures.Images.SetKeyName(18, "2teleporter");
-            this.textures.Images.SetKeyName(19, "3teleporter");
-            this.textures.Images.SetKeyName(20, "ironbar");
-            this.textures.Images.SetKeyName(21, "Iyellow");
-            this.textures.Images.SetKeyName(22, "Iblue");
-            this.textures.Images.SetKeyName(23, "Igreen");
+            this.textures.Images.SetKeyName(2, "deathpoint");
+            this.textures.Images.SetKeyName(3, "wall");
+            this.textures.Images.SetKeyName(4, "Kgreen");
+            this.textures.Images.SetKeyName(5, "Kblue");
+            this.textures.Images.SetKeyName(6, "Kyellow");
+            this.textures.Images.SetKeyName(7, "player_final");
+            this.textures.Images.SetKeyName(8, "kyellow_");
+            this.textures.Images.SetKeyName(9, "kgreen_");
+            this.textures.Images.SetKeyName(10, "kblue_");
+            this.textures.Images.SetKeyName(11, "ironbar");
+            this.textures.Images.SetKeyName(12, "Iyellow");
+            this.textures.Images.SetKeyName(13, "Iblue");
+            this.textures.Images.SetKeyName(14, "Igreen");
+            this.textures.Images.SetKeyName(15, "player");
+            this.textures.Images.SetKeyName(16, "player_happy");
+            this.textures.Images.SetKeyName(17, "player_jim");
+            this.textures.Images.SetKeyName(18, "player_neutral");
+            this.textures.Images.SetKeyName(19, "coin");
+            this.textures.Images.SetKeyName(20, "hdeathpoint");
+            this.textures.Images.SetKeyName(21, "1teleporter");
+            this.textures.Images.SetKeyName(22, "2teleporter");
+            this.textures.Images.SetKeyName(23, "3teleporter");
             // 
             // statusLabel
             // 
@@ -136,7 +136,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tricky Forms";
-            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.keyDisplay.ResumeLayout(false);

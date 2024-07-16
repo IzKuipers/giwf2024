@@ -38,6 +38,7 @@ namespace giwf2024
             loadCollider("Igreen", (Point o, PlayerController p) => GreenIronBarCollider(o, p));
             loadCollider("Iblue", (Point o, PlayerController p) => BlueIronBarCollider(o, p));
             loadCollider("Iyellow", (Point o, PlayerController p) => YellowIronBarCollider(o, p));
+            loadCollider("ironbar", (Point o, PlayerController p) => IronBarCollider(o, p));
         }
 
         public bool loadCollider(string cell, Func<Point, PlayerController, bool> action)
@@ -79,7 +80,7 @@ namespace giwf2024
         {
             player.status = "You found a coin!";
             player.coins += 1;
-            grid.changeCell(position.X, position.Y, "empty");
+            grid.changeCell(position.X, position.Y, "..empty");
             player.updatePlayerVibe();
 
             return true;
@@ -232,6 +233,11 @@ namespace giwf2024
 
             player.status = "You need a yellow key!";
 
+            return false;
+        }
+
+        public bool IronBarCollider(Point position, PlayerController player)
+        {
             return false;
         }
     }

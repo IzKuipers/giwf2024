@@ -91,8 +91,11 @@ namespace giwf2024
 
             if (texture == Configuration.emptyCell)
             {
+                cell.Location = new Point(-20, -20);
                 cell.Dispose();
                 controls[y][x] = null;
+
+                return;
             }
 
             cell.Image = textures.getTexture(grid[y][x]);
