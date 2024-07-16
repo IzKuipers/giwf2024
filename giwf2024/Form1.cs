@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Threading;
+using System.IO;
 
 namespace giwf2024
 {
@@ -17,6 +20,7 @@ namespace giwf2024
         private Levels levels;
         private TextureController textureController;
         private FontManager fontManager;
+        private Thread backgroundThread;
 
         public Form1()
         {
@@ -34,6 +38,31 @@ namespace giwf2024
             updateKeyDisplay();
             UpdateWindow();
             levels.nextLevel();
+
+            backgroundThread = new Thread(new ThreadStart(eventLoop));
+            backgroundThread.IsBackground = true;
+            backgroundThread.Start();
+        }
+
+        public void eventLoop() {
+            int length = 0;
+
+            while (true)
+            {
+                Thread.Sleep(1000);
+
+                string[] lines = Logging.store.ToArray();
+
+                if (length == lines.Length) continue;
+
+                length = lines.Length;
+
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(Environment.CurrentDirectory, "tricky.log")))
+                {
+                    foreach (string line in lines)
+                        outputFile.WriteLine(line);
+                }
+            }
         }
 
         public void UpdateWindow()
