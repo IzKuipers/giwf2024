@@ -18,6 +18,8 @@ namespace giwf2024
 
         public CollisionManager(Grid grid, Levels levels, TextureController textureController, Form1 form)
         {
+            Logging.Log("CollisionManager", "Constructing");
+
             this.grid = grid;
             this.levels = levels;
             this.textureController = textureController;
@@ -33,11 +35,16 @@ namespace giwf2024
             loadCollider("1teleporter", (Point o, PlayerController p) => FirstTeleporterCollider(o, p));
             loadCollider("2teleporter", (Point o, PlayerController p) => SecondTeleporterCollider(o, p));
             loadCollider("3teleporter", (Point o, PlayerController p) => ThirdTeleporterCollider(o, p));
+            loadCollider("Igreen", (Point o, PlayerController p) => GreenIronBarCollider(o, p));
+            loadCollider("Iblue", (Point o, PlayerController p) => BlueIronBarCollider(o, p));
+            loadCollider("Iyellow", (Point o, PlayerController p) => YellowIronBarCollider(o, p));
         }
 
         public bool loadCollider(string cell, Func<Point, PlayerController, bool> action)
         {
             if (store.ContainsKey(cell)) return false;
+
+            Logging.Log("CollisionManager.loadCollider", "Loading collider for cell '" + cell + "'");
 
             store.Add(cell, action);
 
@@ -187,6 +194,45 @@ namespace giwf2024
             }
 
             return true;
+        }
+
+        public bool GreenIronBarCollider(Point position, PlayerController player)
+        {
+            if (player.hasGreenKey)
+            {
+                grid.changeCell(position.X, position.Y, "..empty");
+                return true;
+            }
+
+            player.status = "You need a green key!";
+
+            return false;
+        }
+
+        public bool BlueIronBarCollider(Point position, PlayerController player)
+        {
+            if (player.hasBlueKey)
+            {
+                grid.changeCell(position.X, position.Y, "..empty");
+                return true;
+            }
+
+            player.status = "You need a blue key!";
+
+            return false;
+        }
+
+        public bool YellowIronBarCollider(Point position, PlayerController player)
+        {
+            if (player.hasYellowKey)
+            {
+                grid.changeCell(position.X, position.Y, "..empty");
+                return true;
+            }
+
+            player.status = "You need a yellow key!";
+
+            return false;
         }
     }
 }

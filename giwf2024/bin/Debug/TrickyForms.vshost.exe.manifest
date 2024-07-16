@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrickyForms.exe" size="272384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrickyForms.exe" size="280576">
       <assemblyIdentity name="TrickyForms" version="3.0.0.0" publicKeyToken="D52E369421B025FA" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vetKk5HJrEZimg85jTgiXelDpEk=</dsig:DigestValue>
+        <dsig:DigestValue>MsBq5k1lox+BgkxMJpa7suTbrsE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -69,7 +69,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>MEM2jK1/kICAQLuaCjkJbonS60Q=</dsig:DigestValue>
+      <dsig:DigestValue>9RHZcpd2MtnvbHblT/QNTax7a3E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="levels\2.txt" size="7523">

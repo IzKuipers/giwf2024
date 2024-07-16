@@ -63,6 +63,13 @@ namespace giwf2024
                 Logging.Log("Levels.loadFile", "Loading level failed!");
                 DialogResult msg = MessageBox.Show("Failed to load level: " + e.Message, "Level load failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                try
+                {
+                    if (!form.IsDisposed)
+                        form.Close();
+                }
+                catch { }
+
                 return;
             }
         }
