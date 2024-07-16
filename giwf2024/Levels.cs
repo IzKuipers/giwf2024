@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace giwf2024
 {
@@ -15,6 +16,7 @@ namespace giwf2024
         public int Warnings = 0;
         public int CurrentLevel = 0;
         public int LevelCount = 3;
+        public Point playerStartPosition = new Point(0, 0);
 
         public Levels(Form1 form, Grid grid, TextureController textures)
         {
@@ -35,9 +37,8 @@ namespace giwf2024
 
                 string text = reader.ReadToEnd();
 
-                Logging.Log("Levels.loadFile", "Read this level:\n\n" + text.Replace('e', ' '));
-
                 List<List<string>> result = new List<List<string>> { };
+                
                 string[] rows = text.Split('\n');
 
                 for (int y = 0; y < rows.Length; y++)
@@ -46,7 +47,7 @@ namespace giwf2024
 
                     string[] split = rows[y].Split(' ');
 
-                    for (int x = 0; x < split.Length; x ++)
+                    for (int x = 0; x < split.Length; x++)
                     {
                         row.Add(split[x]);
 
@@ -74,6 +75,7 @@ namespace giwf2024
 
             int width = data[0].Count - 1;
             Configuration.gridWidth = width;
+            playerStartPosition = new Point(0, 0);
             grid.populateGrid();
             form.UpdateWindow();
 
@@ -91,6 +93,12 @@ namespace giwf2024
 
                     string cell = "" + data[y][x];
 
+                    if (cell == "$$")
+                    {
+                        playerStartPosition = new Point(x, y);
+                        continue;
+                    }
+
                     string texture = textures.shortIdToId(cell);
 
                     if (texture == null)
@@ -107,6 +115,7 @@ namespace giwf2024
 
             grid.populateControls();
             form.updatePlayerCoinState();
+            form.setPlayerPosition(playerStartPosition);
             Logging.Log("Levels.loadData", "Level load completed with " + Warnings + " warning(s).");
             form.ResumeLayout();
             form.Show();

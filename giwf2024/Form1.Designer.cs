@@ -63,6 +63,9 @@
             this.textures.Images.SetKeyName(14, "kyellow_");
             this.textures.Images.SetKeyName(15, "kgreen_");
             this.textures.Images.SetKeyName(16, "kblue_");
+            this.textures.Images.SetKeyName(17, "1teleporter");
+            this.textures.Images.SetKeyName(18, "2teleporter");
+            this.textures.Images.SetKeyName(19, "3teleporter");
             // 
             // statusLabel
             // 

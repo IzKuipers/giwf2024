@@ -124,6 +124,10 @@ namespace giwf2024
             CenterToScreen();
         }
 
+        public void setPlayerPosition(Point position) {
+            playerController.movePlayerTo(position.X, position.Y, true);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 

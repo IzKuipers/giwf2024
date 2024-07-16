@@ -30,6 +30,9 @@ namespace giwf2024
             loadCollider("Kyellow", (Point o, PlayerController p) => YellowKeyCollider(o, p));
             loadCollider("#next", (Point o, PlayerController p) => NextLevelCollider(o, p));
             loadCollider("hdeathpoint", (Point o, PlayerController p) => HiddenDeathPointCollider(o, p));
+            loadCollider("1teleporter", (Point o, PlayerController p) => FirstTeleporterCollider(o, p));
+            loadCollider("2teleporter", (Point o, PlayerController p) => SecondTeleporterCollider(o, p));
+            loadCollider("3teleporter", (Point o, PlayerController p) => ThirdTeleporterCollider(o, p));
         }
 
         public bool loadCollider(string cell, Func<Point, PlayerController, bool> action)
@@ -47,8 +50,10 @@ namespace giwf2024
 
             Func<Point, PlayerController, bool> action = null;
 
-            for (int i = 0; i < keys.Length; i++) { 
-                if (keys[i].EndsWith(cell) || keys[i] == cell){
+            for (int i = 0; i < keys.Length; i++)
+            {
+                if (keys[i].EndsWith(cell) || keys[i] == cell)
+                {
                     action = store[keys[i]];
                 }
             }
@@ -106,22 +111,80 @@ namespace giwf2024
             return true;
         }
 
-        public bool NextLevelCollider(Point position, PlayerController player) 
+        public bool NextLevelCollider(Point position, PlayerController player)
         {
             form.Update();
             System.Threading.Thread.Sleep(10);
             levels.nextLevel();
             form.Update();
-            player.movePlayerTo(0, 0, true);
-            
+
+            player.movePlayerTo(levels.playerStartPosition.X, levels.playerStartPosition.Y, true);
+
             return false;
         }
 
-        public bool HiddenDeathPointCollider(Point position, PlayerController player) 
+        public bool HiddenDeathPointCollider(Point position, PlayerController player)
         {
             // TODO: restart level, hearts?
             MessageBox.Show("You got poisoned! Goodbye.", "Game over");
             form.Close();
+
+            return true;
+        }
+
+        public bool FirstTeleporterCollider(Point position, PlayerController player)
+        {
+            for (int y = 0; y < grid.grid.Count; y++)
+            {
+                for (int x = 0; x < grid.grid[y].Count; x++)
+                {
+                    if (position.X == x && position.Y == y) continue;
+                    if (grid.grid[y][x] != "1teleporter") continue;
+
+                    player.movePlayerTo(x, y, true);
+                    player.status = "WOOSH!!";
+
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool SecondTeleporterCollider(Point position, PlayerController player)
+        {
+            for (int y = 0; y < grid.grid.Count; y++)
+            {
+                for (int x = 0; x < grid.grid[y].Count; x++)
+                {
+                    if (position.X == x && position.Y == y) continue;
+                    if (grid.grid[y][x] != "2teleporter") continue;
+
+                    player.movePlayerTo(x, y, true);
+                    player.status = "WOOSH!!";
+
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool ThirdTeleporterCollider(Point position, PlayerController player)
+        {
+            for (int y = 0; y < grid.grid.Count; y++)
+            {
+                for (int x = 0; x < grid.grid[y].Count; x++)
+                {
+                    if (position.X == x && position.Y == y) continue;
+                    if (grid.grid[y][x] != "3teleporter") continue;
+
+                    player.movePlayerTo(x, y, true);
+                    player.status = "WOOSH!!";
+
+                    return false;
+                }
+            }
 
             return true;
         }
