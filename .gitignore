@@ -4,3 +4,4 @@ giwf2024/bin/
 giwf2024/obj/
 *obj/*
 *bin/
+*.suo
