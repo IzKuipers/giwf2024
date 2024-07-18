@@ -149,6 +149,9 @@
     <Content Include="levels\1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="levels\2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="player_happy.ico" />
     <None Include="TrickyForms.pfx" />
   </ItemGroup>
@@ -178,7 +181,7 @@
     <Content Include="levels\4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="levels\2.txt">
+    <Content Include="levels\2old.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="levels\3.txt">

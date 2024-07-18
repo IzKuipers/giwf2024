@@ -97,7 +97,7 @@ namespace giwf2024
         {
             player.status = "You found a coin!";
             player.coins += 1;
-            grid.changeCell(position.X, position.Y, "..empty");
+            grid.changeCell(position.X, position.Y, "...empty");
             player.updatePlayerVibe();
 
             return true;
@@ -218,7 +218,7 @@ namespace giwf2024
         {
             if (player.hasGreenKey)
             {
-                grid.changeCell(position.X, position.Y, "..empty");
+                grid.changeCell(position.X, position.Y, "...empty");
                 return true;
             }
 
@@ -231,7 +231,7 @@ namespace giwf2024
         {
             if (player.hasBlueKey)
             {
-                grid.changeCell(position.X, position.Y, "..empty");
+                grid.changeCell(position.X, position.Y, "...empty");
                 return true;
             }
 
@@ -244,7 +244,7 @@ namespace giwf2024
         {
             if (player.hasYellowKey)
             {
-                grid.changeCell(position.X, position.Y, "..empty");
+                grid.changeCell(position.X, position.Y, "...empty");
                 return true;
             }
 
