@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace giwf2024
 {
@@ -39,6 +40,22 @@ namespace giwf2024
             loadCollider("Iblue", (Point o, PlayerController p) => BlueIronBarCollider(o, p));
             loadCollider("Iyellow", (Point o, PlayerController p) => YellowIronBarCollider(o, p));
             loadCollider("ironbar", (Point o, PlayerController p) => IronBarCollider(o, p));
+            loadCollider("Lhstart", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("Lhend", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lhend_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("Lhmid", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lhmid_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("lhone_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("Lhone", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lhstart_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("Lvstart", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("Lvend", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lvend_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("Lvmid", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lvmid_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("lvone_", (Point o, PlayerController p) => LaserOffCollider(o, p));
+            loadCollider("Lvone", (Point o, PlayerController p) => LaserCollider(o, p));
+            loadCollider("lvstart_", (Point o, PlayerController p) => LaserOffCollider(o, p));
         }
 
         public bool loadCollider(string cell, Func<Point, PlayerController, bool> action)
@@ -239,6 +256,23 @@ namespace giwf2024
         public bool IronBarCollider(Point position, PlayerController player)
         {
             return false;
+        }
+
+        public bool LaserCollider(Point position, PlayerController player) {
+            MessageBox.Show("You got zapped! Goodbye.", "Game over");
+            try
+            {
+                form.Close(); 
+            }
+            catch { }
+
+            Application.Exit();
+
+            return false;
+        }
+
+        public bool LaserOffCollider(Point position, PlayerController player) {
+            return true;
         }
     }
 }

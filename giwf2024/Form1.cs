@@ -21,6 +21,7 @@ namespace giwf2024
         private TextureController textureController;
         private FontManager fontManager;
         private Thread backgroundThread;
+        public Thread laserThread;
 
         public Form1()
         {
@@ -42,6 +43,9 @@ namespace giwf2024
             backgroundThread = new Thread(new ThreadStart(eventLoop));
             backgroundThread.IsBackground = true;
             backgroundThread.Start();
+            laserThread = new Thread(new ThreadStart(laserLoop));
+            laserThread.IsBackground = true;
+            laserThread.Start();
         }
 
         public void eventLoop() {
@@ -62,6 +66,42 @@ namespace giwf2024
                     foreach (string line in lines)
                         outputFile.WriteLine(line);
                 }
+            }
+        }
+
+        public void laserLoop() {
+            while (true) {
+                Thread.Sleep(1000);
+
+                Point playerPosition = playerController.position;                
+
+                for (int y = 0; y < grid.grid.Count; y++)
+                {
+                    for (int x = 0; x < grid.grid[y].Count; x++) 
+                    {
+                        
+                        string cell = grid.grid[y][x];
+                        string lower = cell.ToLower();
+
+                        if (!lower.StartsWith("lv") && !lower.StartsWith("lh")) {
+                            continue;
+                        }
+
+                        switch (cell[0]) { 
+                            case 'L': // it's currently on
+                                grid.changeCell(x, y, cell.Replace("L", "l") + "_");
+                                break;
+                            case 'l':
+                                grid.changeCell(x, y, cell.Remove(cell.Length - 1).Replace("l", "L"));
+                                break;
+                        }
+
+                        
+                    }
+                }
+
+                bool collided = !playerController.checkBounds(playerPosition);
+                if (collided) laserThread.Abort();
             }
         }
 

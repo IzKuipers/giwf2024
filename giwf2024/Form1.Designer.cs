@@ -70,6 +70,22 @@
             this.textures.Images.SetKeyName(21, "1teleporter");
             this.textures.Images.SetKeyName(22, "2teleporter");
             this.textures.Images.SetKeyName(23, "3teleporter");
+            this.textures.Images.SetKeyName(24, "Lhstart");
+            this.textures.Images.SetKeyName(25, "Lhend");
+            this.textures.Images.SetKeyName(26, "lhend_");
+            this.textures.Images.SetKeyName(27, "Lhmid");
+            this.textures.Images.SetKeyName(28, "lhmid_");
+            this.textures.Images.SetKeyName(29, "lhone_");
+            this.textures.Images.SetKeyName(30, "Lhone");
+            this.textures.Images.SetKeyName(31, "lhstart_");
+            this.textures.Images.SetKeyName(32, "Lvstart");
+            this.textures.Images.SetKeyName(33, "Lvend");
+            this.textures.Images.SetKeyName(34, "lvend_");
+            this.textures.Images.SetKeyName(35, "Lvmid");
+            this.textures.Images.SetKeyName(36, "lvmid_");
+            this.textures.Images.SetKeyName(37, "lvone_");
+            this.textures.Images.SetKeyName(38, "Lvone");
+            this.textures.Images.SetKeyName(39, "lvstart_");
             // 
             // statusLabel
             // 

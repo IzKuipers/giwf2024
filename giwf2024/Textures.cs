@@ -33,7 +33,23 @@ namespace giwf2024
             "player_jim",
             "1teleporter",
             "2teleporter", 
-            "3teleporter"
+            "3teleporter",
+            "Lhstart",
+            "Lhend",
+            "lhend_",
+            "Lhmid",
+            "lhmid_",
+            "lhone_",
+            "Lhone",
+            "lhstart_",
+            "Lvstart",
+            "Lvend",
+            "lvend_",
+            "Lvmid",
+            "lvmid_",
+            "lvone_",
+            "Lvone",
+            "lvstart_"
         };
         private ImageList textures;
 
