@@ -46,7 +46,7 @@
             // 
             this.textures.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("textures.ImageStream")));
             this.textures.TransparentColor = System.Drawing.Color.Transparent;
-            this.textures.Images.SetKeyName(0, "..empty");
+            this.textures.Images.SetKeyName(0, "...empty");
             this.textures.Images.SetKeyName(1, "#next");
             this.textures.Images.SetKeyName(2, "deathpoint");
             this.textures.Images.SetKeyName(3, "wall");

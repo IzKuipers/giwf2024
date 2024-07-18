@@ -13,6 +13,6 @@ namespace giwf2024
         public static readonly int cellSize = 20;
         public static readonly int windowPadding = 0;
         public static readonly Point playerStartPosition = new Point(0, 0);
-        public static readonly string emptyCell = "..empty";
+        public static readonly string emptyCell = "...empty";
     }
 }

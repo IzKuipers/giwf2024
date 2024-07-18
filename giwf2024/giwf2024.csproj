@@ -65,8 +65,7 @@
     <ManifestCertificateThumbprint>9FAF613771949F8542E7A4D13E6740D03D24CDEA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>TrickyForms.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

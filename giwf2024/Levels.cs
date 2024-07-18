@@ -100,7 +100,7 @@ namespace giwf2024
 
                     string cell = "" + data[y][x];
 
-                    if (cell == "$$")
+                    if (cell == "$$p")
                     {
                         playerStartPosition = new Point(x, y);
                         continue;
