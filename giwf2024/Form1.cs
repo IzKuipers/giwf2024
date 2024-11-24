@@ -101,7 +101,7 @@ namespace giwf2024
                 }
 
                 bool collided = !playerController.checkBounds(playerPosition);
-                if (collided) laserThread.Abort();
+                if (playerController.zapped || collided) laserThread.Abort();
             }
         }
 

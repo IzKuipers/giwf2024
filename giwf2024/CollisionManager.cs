@@ -259,6 +259,8 @@ namespace giwf2024
         }
 
         public bool LaserCollider(Point position, PlayerController player) {
+            player.zapped = true;
+
             MessageBox.Show("You got zapped! Goodbye.", "Game over");
             try
             {

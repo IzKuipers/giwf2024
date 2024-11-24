@@ -20,6 +20,7 @@ namespace giwf2024
         public bool hasYellowKey = false;
         public bool hasBlueKey = false;
         public bool hasGreenKey = false;
+        public bool zapped = false;
         public string status = "";
 
 
