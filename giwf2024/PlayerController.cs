@@ -59,7 +59,14 @@ namespace giwf2024
 
         public void updatePosition()
         {
-            _player.Location = Utilities.translateGridPosition(position);
+            try
+            {
+                _player.Location = Utilities.translateGridPosition(position);
+            }
+            catch (Exception e)
+            {
+                Logging.Log("PlayerController.updatePosition", "Updating player position failed! " + e.Message);
+            }
         }
 
         public void movePlayerRelatively(int xModifier, int yModifier)
